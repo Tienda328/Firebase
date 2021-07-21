@@ -12,8 +12,12 @@
   "dependencies": {
     "@react-native-firebase/app": "^12.2.0",
     "@react-native-firebase/messaging": "^12.2.0",
+    "appcenter": "4.2.0",
+    "appcenter-analytics": "4.2.0",
+    "appcenter-crashes": "4.2.0",
     "react": "17.0.1",
-    "react-native": "0.64.2"
+    "react-native": "0.64.2",
+    "react-native-code-push": "^7.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",

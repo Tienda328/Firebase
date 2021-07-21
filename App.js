@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Alert, View, Text, Image } from 'react-native';
 import messaging from '@react-native-firebase/messaging';
+import codePush  from 'react-native-code-push';
 
 function App() {
   const [notification, setNotification]=useState({title:undefined, body:undefined, img: undefined})
@@ -53,11 +54,16 @@ function App() {
 
   return(
     <View>
-      <Text>dsdsd</Text>
+      <Text>Tét appcenter</Text>
       <Text>{`title: ${notification?.title}`}</Text>
       <Text>{`title: ${notification?.body}`}</Text>
       <Image source={{uri:notification?.img }} style={{width: 100, height: 100}} />
     </View>
   )
 }
-export default App;
+
+const codePushOptions ={
+  checKFrequency: codePush.CheckFrequency.ON_APP_START
+}
+
+export default codePush(codePushOptions)(App);
